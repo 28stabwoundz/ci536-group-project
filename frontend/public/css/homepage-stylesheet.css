@@ -2,9 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #ffffff;
     font-family: Verdana, Geneva, sans-serif;
-    color: #000;
+    color: #ffffff;
     font-size: 100%;
     line-height: 1.2;
 }
@@ -14,7 +14,7 @@ body {
     margin-right: auto;
     padding-left: 5px;
     padding-right: 5px;
-    background-color: #D5E7FB;
+    background-color: #ffffff;
 
 }
 h1,h2,h3,h4,h5,h6 {
@@ -71,6 +71,10 @@ h4 	{
     color: #000;
 	font-size: 20px;
 	line-height: 30px;
+}
+
+li{
+    color:#000
 }
 /*grouping------------------------------------------------------------------- */
 p	{
@@ -178,7 +182,7 @@ a:link, a:active{
     color: #0090D2;
 }
 a:visited{
-    color: #700ac9;
+    color: #a368d7;
 }
 a:hover {
     color: #003a61;
@@ -203,13 +207,13 @@ a:hover {
 }
 .banner {
     grid-area: banner;
-    background-color: #D5E7FB;
+    background-color: #ffffff;
     background-size: cover;
     padding-left: 5px;
 }
 .article{
     grid-area: article;
-    background-color: #D5E7FB;
+    background-color: #ffffff;
     background-size: cover;
     padding-left: 5px;
 }
@@ -220,18 +224,18 @@ a:hover {
 .menu {
     grid-area: menu;
     background-size: cover;
-    background-color: #909090;
+    background-color: #2282ef;
 }
 nav {
     grid-area: nav;
     background-size: cover;
-    background-color: #D5E7FB;
+    background-color: #2282ef;
 }
 
 footer {
     grid-area: footer;
     background-size: cover;
-    background-color: #D5E7FB;
+    background-color: #2282ef;
 }
 #wrapper { /* one column layout*/
     display: grid;
@@ -289,3 +293,4 @@ footer {
         border-bottom: 0;
     }
 }
+
