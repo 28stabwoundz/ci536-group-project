@@ -1,0 +1,33 @@
+# Firebase credentials
+ci536integratedgroupproject-firebase-adminsdk-fbsvc-5242b5c73e.json
+*-firebase-adminsdk-*.json
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Node modules and build files
+node_modules/
+dist/
+build/
+.cache/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo 
