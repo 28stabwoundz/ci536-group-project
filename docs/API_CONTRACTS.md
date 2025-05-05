@@ -92,18 +92,19 @@ Returns detailed job info.
 ## 4. 📄 Applications
 
 ### `POST /api/upload/cv`
-Get upload URL for Firebase Storage.
+Upload CV file directly to server.
 
 ```json
 Request:
-{ 
-  "file_type": "pdf" 
-}
+Content-Type: multipart/form-data
+Form data:
+- file: [binary file data]
 
 Response:
 {
-  "upload_url": "https://storage.googleapis.com/bucket/cv_123.pdf",
-  "file_id": "cv_123.pdf"
+  "message": "File uploaded successfully",
+  "file_id": "cv_a1b2c3d4e5.pdf",
+  "file_url": "/uploads/cv_a1b2c3d4e5.pdf"
 }
 ```
 
@@ -114,7 +115,7 @@ Submit application.
 Request:
 {
   "job_id": 201,
-  "cv_url": "cv_123.pdf",
+  "cv_url": "/uploads/cv_a1b2c3d4e5.pdf",
   "cover_note": "I am interested..."
 }
 ```
@@ -150,7 +151,7 @@ Returns all users (paginated).
 ## ⚠️ Implementation Notes
 
 1. All routes are prefixed with `/api` in the actual implementation
-2. CV upload uses Firebase Storage instead of S3
+2. CV files are stored locally in the `/uploads` directory on the server
 3. Frontend must use .jsx extension for components with JSX
 4. Backend runs on port 5001, frontend on port 3001/3002
 5. Many endpoints are currently stubs returning placeholder data

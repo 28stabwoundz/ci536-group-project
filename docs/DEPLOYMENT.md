@@ -32,8 +32,10 @@ This document outlines the deployment strategy for the Prison Jobs Platform.
 - **Current Status**: SQLite fully implemented for development
 
 ## 🧾 CV Storage
-- **Cloud Provider**: Firebase Storage
-- **Upload Flow**: Pre-signed URLs (via `/api/upload/cv` endpoint)
+- **Storage Type**: Local file storage
+- **Upload Implementation**: Direct multipart uploads via multer
+- **Files Path**: `/backend/uploads` directory
+- **Access URL**: `/uploads/{filename}` via Express static middleware
 - **Status**: Implemented
 
 ## 📩 Notifications
@@ -83,7 +85,6 @@ This document outlines the deployment strategy for the Prison Jobs Platform.
    - Update environment variables for production
    - Configure database connection string
    - Set secure JWT secret
-   - Add Firebase credentials
    - Configure CORS for production domains
 
 ### Stage 3: Frontend Deployment

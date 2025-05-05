@@ -39,8 +39,8 @@ This document shows how each feature communicates with others and the APIs it de
 
 ### Application Flow ✅
 1. User selects "Apply" on a job → Application form displayed
-2. CV uploaded to Firebase Storage
-3. Application submitted with CV URL
+2. CV uploaded to local server storage
+3. Application submitted with CV file path
 4. Application status tracked and displayed to user
 
 ### Resume Parsing Flow 🟡
@@ -83,10 +83,10 @@ This document shows how each feature communicates with others and the APIs it de
 
 ## 📤 Upload Implementation
 
-1. Frontend requests upload URL → `/api/upload/cv`
-2. Upload directly to Firebase Storage using pre-signed URL
-3. CV URL included in `/api/jobs/apply` request
-4. Application stored in database with reference to CV
+1. Frontend directly uploads CV files → `/api/upload/cv`
+2. Files stored locally in backend `/uploads` directory
+3. File URL path included in `/api/jobs/apply` request
+4. Application stored in database with reference to CV file path
 
 ## 🔄 Database Interactions
 

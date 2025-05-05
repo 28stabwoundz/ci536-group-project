@@ -26,12 +26,4 @@ JWT_EXPIRES_IN=24h  # Token expiration time
 
 ## API Configuration
 API_VERSION=v1
-API_PREFIX=/api
-
-## Firebase Configuration (for CV storage)
-FIREBASE_API_KEY=your_firebase_api_key
-FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-FIREBASE_PROJECT_ID=your-project-id
-FIREBASE_STORAGE_BUCKET=your-storage-bucket.appspot.com
-FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-FIREBASE_APP_ID=your_app_id 
+API_PREFIX=/api 
