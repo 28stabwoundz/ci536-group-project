@@ -4,10 +4,18 @@ import api from './api';
 const uploadApi = api.createAxiosInstance('upload');
 
 const uploadService = {
-  // Get a pre-signed URL for CV uploads
-  getUploadUrl: async (fileType) => {
+  // Upload CV directly to server
+  uploadCV: async (file) => {
     try {
-      const response = await uploadApi.post('/cv', { file_type: fileType });
+      const formData = new FormData();
+      formData.append('file', file);
+      
+      const response = await uploadApi.post('/cv', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      
       return response.data;
     } catch (error) {
       return api.handleApiError(error);

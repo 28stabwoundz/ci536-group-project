@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 5001;
 
@@ -26,6 +27,9 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+// Serve static files from the uploads directory
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // Global error handler
 app.use((err, req, res, next) => {

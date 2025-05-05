@@ -66,19 +66,18 @@ const CVUpload = () => {
     setLoading(true);
 
     try {
-      // 1. Get a pre-signed URL for the CV upload
-      const fileType = formData.cvFile.name.split('.').pop();
-      const { upload_url, file_id } = await uploadService.getUploadUrl(fileType);
-      
-      // For now, since we may not have the actual file upload working,
-      // we'll simulate a successful upload and use a placeholder URL
-      const cvUrl = file_id || `https://example.com/cv_${Date.now()}.${fileType}`;
+      if (!formData.cvFile) {
+        throw new Error('Please select a CV file to upload');
+      }
+
+      // 1. Upload the CV file directly
+      const uploadResult = await uploadService.uploadCV(formData.cvFile);
       
       // 2. Apply to the job with the CV URL (if we have a job ID)
       if (jobId) {
         await jobsService.applyToJob({
           job_id: jobId,
-          cv_url: cvUrl,
+          cv_url: uploadResult.file_url,
           cover_note: formData.coverNote || `Application from ${formData.firstName} ${formData.lastName}`
         });
         

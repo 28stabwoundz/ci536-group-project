@@ -1,5 +1,4 @@
 # Firebase credentials
-ci536integratedgroupproject-firebase-adminsdk-fbsvc-5242b5c73e.json
 *-firebase-adminsdk-*.json
 
 # Environment files
@@ -30,4 +29,8 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
-*.swo 
+*.swo
+
+# Upload directories
+backend/uploads/*
+!backend/uploads/.gitkeep 

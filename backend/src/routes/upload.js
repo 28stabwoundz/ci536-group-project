@@ -1,36 +1,48 @@
 // Upload routes
 const express = require('express');
 const router = express.Router();
-const { storage } = require('../config/firebase');
+const multer = require('multer');
+const path = require('path');
+const { saveFile } = require('../config/upload');
 
-// Get a pre-signed URL for uploading CV
-router.post('/cv', (req, res) => {
-  try {
-    const { file_type } = req.body;
+// Configure multer for file uploads
+const storage = multer.memoryStorage();
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 10 * 1024 * 1024, // 10MB max file size
+  },
+  fileFilter: (req, file, cb) => {
+    // Accept only specific document types
+    const allowedTypes = ['.pdf', '.doc', '.docx'];
+    const ext = path.extname(file.originalname).toLowerCase();
     
-    if (!file_type) {
-      return res.status(400).json({ error: 'File type is required' });
+    if (allowedTypes.includes(ext)) {
+      return cb(null, true);
+    }
+    
+    cb(new Error('Only PDF, DOC, and DOCX files are allowed'));
+  }
+});
+
+// Upload CV endpoint
+router.post('/cv', upload.single('file'), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: 'No file uploaded' });
     }
 
-    // Generate a unique file name
-    const fileName = `cv_${Date.now()}.${file_type}`;
-    
-    // Create a reference to the file in Firebase Storage
-    const file = storage.file(fileName);
-    
-    // Generate a signed URL for uploading
-    file.getSignedUrl({
-      action: 'write',
-      expires: Date.now() + 15 * 60 * 1000, // 15 minutes
-      contentType: `application/${file_type}`,
-    }).then(signedUrls => {
-      res.status(200).json({
-        upload_url: signedUrls[0],
-        file_id: fileName
-      });
-    }).catch(error => {
-      console.error('Error generating signed URL:', error);
-      res.status(500).json({ error: 'Failed to generate upload URL' });
+    // Save file to local filesystem
+    const fileInfo = await saveFile(
+      req.file.buffer,
+      req.file.originalname,
+      req.file.mimetype
+    );
+
+    res.status(200).json({
+      message: 'File uploaded successfully',
+      file_id: fileInfo.filename,
+      file_url: fileInfo.path
     });
   } catch (error) {
     console.error('Upload error:', error);
