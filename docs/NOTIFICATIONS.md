@@ -1,32 +1,33 @@
 # 📬 NOTIFICATIONS.md
 
-This file outlines how system notifications will be handled via email and dashboard.
+This file outlines how system notifications will be handled via email and dashboard in future phases of the project.
 
-## 📦 Notification Types
+## 📧 Notification Types (Future Implementation)
 
-| Trigger Event                    | Recipient       | Message Type        | Delivery Method      |
-|----------------------------------|------------------|----------------------|-----------------------|
-| Job application submitted        | Job Seeker       | Confirmation         | Email + Dashboard     |
-| Application reviewed             | Job Seeker       | Status Update        | Email                 |
-| Interview scheduled              | Job Seeker       | Reminder             | Email                 |
-| Job post approved/rejected       | Recruiter        | Approval Notice      | Email                 |
+| Trigger Event                    | Recipient       | Message Type        | Delivery Method      | Status |
+|----------------------------------|------------------|----------------------|-----------------------|--------|
+| Job application submitted        | Job Seeker       | Confirmation         | Email + Dashboard     | 🔮 Planned |
+| Application reviewed             | Job Seeker       | Status Update        | Email                 | 🔮 Planned |
+| Interview scheduled              | Job Seeker       | Reminder             | Email                 | 🔮 Planned |
+| Job post approved/rejected       | Recruiter        | Approval Notice      | Email                 | 🔮 Planned |
 
 ## 🛠 Email Delivery System
 
-### ✅ Chosen Services
+### 📌 Planned Services
 - **Primary**: SendGrid or Amazon SES (via backend SDK or REST API)
 - **Fallback**: SMTP-compatible fallback (e.g., Mailgun)
+- **Current Status**: Not implemented in the current phase
 
 ### 🔐 Authentication
-- Use API key in backend `.env`:
+- Will use API key in backend `.env`:
   ```env
   EMAIL_API_KEY=your_api_key
   ```
 
-## 📮 API Endpoint Design
+## 📮 API Endpoint Design (Future Implementation)
 
-### `POST /notifications/email`
-Sends an email to a specific user.
+### `POST /api/notifications/email`
+Will send an email to a specific user.
 
 ```json
 Request:
@@ -42,7 +43,7 @@ Response:
 }
 ```
 
-## 🔔 In-Dashboard Notifications (Optional)
+## 🔔 In-Dashboard Notifications (Future Enhancement)
 
 ```json
 {
@@ -55,8 +56,20 @@ Response:
 
 This can be shown in a user dashboard as a list of messages with timestamps.
 
-## ✅ To-Do:
-1. Choose email provider (SendGrid / SES)
-2. Add `/notifications/email` route
-3. Store dashboard messages in DB (optional)
-4. Add toggle for notification preferences in profile page 
+## ✅ Future Implementation Plan:
+1. Select email provider (SendGrid / SES)
+2. Add `/api/notifications/email` route
+3. Create database schema for storing notification preferences
+4. Implement notification history in user dashboard
+5. Add toggle for notification preferences in user profile
+
+## 📋 Integration with Existing Features
+- Application submission will trigger confirmation emails
+- Status changes will notify relevant users
+- Admin actions will generate appropriate notifications
+- User preferences will control notification delivery methods
+
+## 🚨 Implementation Notes
+- Notifications are not included in the current MVP phase
+- Will be implemented in future project phases
+- Current database schema will need to be extended to support notifications 

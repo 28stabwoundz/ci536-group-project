@@ -1,23 +1,79 @@
-# 👥 FEATURE_OWNERS.md
+# 👤 FEATURE_OWNERS.md
 
-This file assigns responsibilities across the six main features and tracks progress.
+This document tracks feature ownership and implementation status across the project.
 
-| Feature                                | Owner       | Status       | Notes                                  |
-|----------------------------------------|-------------|--------------|----------------------------------------|
-| 1. User Authentication & Role Mgmt     | [Member 1]  | 🟡 In Progress | JWT, register/login, role middleware   |
-| 2. Questionnaire & Job Matching        | [Member 2]  | 🟡 In Progress | UI, storage, matching logic            |
-| 3. Job Search & Filtering              | [Member 3]  | ❌ Not Started | Frontend filters, pagination, API hook |
-| 4. Job Applications & Resume Upload    | [Member 4]  | 🟡 In Progress | CV upload flow, apply form             |
-| 5. Resume Parsing & Applicant Scoring  | [Member 5]  | ❌ Not Started | Parser logic, scoring function         |
-| 6. Admin Dashboard & Reporting         | [Member 6]  | ❌ Not Started | UI, stats, approval system             |
+## Core Features & Current Status
 
-> ✅ = Complete, 🟡 = In Progress, ❌ = Not Started
+### 1. Authentication System ✅
+**Status**: Complete
+- User registration with email/password
+- Login system with JWT authentication
+- Role-based access control (job_seeker, recruiter, admin)
+- Protected routes in frontend and backend
+- Token validation and refresh
 
-## 📌 Checklist Per Feature
+### 2. Job Listings & Search ✅
+**Status**: Complete
+- Job listing display with details
+- Search and filtering functionality
+- Pagination for job results
+- Job detail view
+- Category-based job browsing
 
-Each owner should:
-- Implement frontend + backend (where needed)
-- Connect API endpoints as per contract
-- Test logic with mock data
-- Document API usage in `/docs/API_CONTRACTS.md`
-- Mark task status in `/docs/TASK.md` 
+### 3. Questionnaire & Matching ✅
+**Status**: Complete
+- Multi-step questionnaire UI
+- Storing user responses in database
+- Job matching algorithm based on answers
+- Displaying job recommendations
+- Saving and updating responses
+
+### 4. CV Upload & Applications ✅
+**Status**: Complete
+- CV file upload to Firebase Storage
+- Job application submission
+- Application tracking
+- Cover note submission
+- Application status updates
+
+### 5. Resume Parsing & Candidate Scoring 🟡
+**Status**: In Progress
+- Basic CV data extraction
+- Skills identification from resumes
+- Candidate scoring against job requirements
+- Ranking candidates for recruiters
+- Resume data storage
+
+### 6. Admin Dashboard & Management 🟡
+**Status**: In Progress
+- Job approval workflow
+- User management interface
+- System statistics and reporting
+- Job and application monitoring
+- Administrative actions
+
+## Implementation Details
+
+### Technology Stack
+- **Frontend**: React with React Router, Axios
+- **Backend**: Express.js, Sequelize ORM
+- **Database**: SQLite (development), PostgreSQL (planned for production)
+- **File Storage**: Firebase Storage
+- **Authentication**: JWT-based with role middleware
+
+### Current Progress
+1. Basic application scaffolding ✅
+2. User authentication flows ✅
+3. Job search and filtering ✅
+4. Questionnaire implementation ✅
+5. Application submission ✅
+6. Protected routes implementation ✅
+7. Database integration with SQLite ✅
+8. Role-based access control ✅
+
+### Next Steps
+1. Complete admin dashboard
+2. Implement resume parsing functionality
+3. Build candidate scoring system
+4. Add additional user features (profile editing, notifications)
+5. Prepare for production deployment 
