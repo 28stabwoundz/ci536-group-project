@@ -10,7 +10,7 @@ Use ✅, 🟡, and ❌ to show task status.
 | Define database schema                    | ✅ Done   |
 | Finalize API contracts                    | ✅ Done   |
 | Choose deployment platforms               | ✅ Done   |
-| Set up cloud storage plan for CVs         | ✅ Done   |
+| Set up local storage for CVs              | ✅ Done   |
 | Agree on feature ownership                | ✅ Done   |
 | Create documentation (API, DB, Planning)  | ✅ Done   |
 | Create `/tests` folder & structure        | ✅ Done   |
@@ -48,9 +48,9 @@ Use ✅, 🟡, and ❌ to show task status.
 - [x] Job detail page UI
 
 ### 4. Applications & Resume Upload
-- [x] CV upload endpoint (implemented with Firebase)
+- [x] CV upload endpoint (implemented with local storage)
 - [x] Apply to job UI
-- [x] Upload CV to Firebase from frontend
+- [x] Upload CV directly to backend server
 - [x] Show application history to users
 
 ### 5. Resume Parsing & Scoring

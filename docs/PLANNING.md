@@ -13,7 +13,7 @@ To build a secure, cloud-hosted job-matching platform for incarcerated individua
 | Frontend    | React.js (Vite, port 3001-3004)  |
 | Backend     | Node.js + Express.js (port 5001) |
 | Database    | SQLite (development)             |
-| Storage     | Firebase Storage for CVs         |
+| Storage     | Local file storage for CVs       |
 | Auth        | JWT-based w/ role middleware     |
 | Hosting     | Local development                |
 | CI/CD       | Planned for future deployment    |
@@ -42,8 +42,8 @@ To build a secure, cloud-hosted job-matching platform for incarcerated individua
 
 - All features use RESTful APIs.
 - Frontend consumes all documented endpoints via `/api` prefix
-- Resume upload uses Firebase Storage via pre-signed URLs
-- CV upload integrates with Firebase Storage
+- CV uploads directly to backend server and are stored locally
+- Direct file access through `/uploads` static file serving
 - Admin dashboard planned as read-only for security
 
 ## 🚫 Out of Scope
@@ -66,7 +66,7 @@ To build a secure, cloud-hosted job-matching platform for incarcerated individua
 ### Sprint 1: Core Infrastructure (Completed)
 **Goal**: Set up project scaffolding and core architecture
 - ✅ Initialize React frontend and Express backend
-- ✅ Set up Firebase Storage integration
+- ✅ Set up local file storage for CV uploads
 - ✅ Create documentation structure
 - ✅ Implement initial UI components
 - ✅ Set up CV upload flow
