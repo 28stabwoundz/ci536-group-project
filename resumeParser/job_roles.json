@@ -1,0 +1,444 @@
+[
+  {
+    "id": 1,
+    "title": "Doctor",
+    "category": "Healthcare",
+    "description": "Diagnoses, treats, and cares for patients.",
+    "requirements": [
+      "medical degree",
+      "clinical experience",
+      "patient care"
+    ],
+    "degree_required": "MD or equivalent",
+    "min_experience_years": 3,
+    "physical_requirements": [
+      "long shifts",
+      "stressful situations"
+    ],
+    "shift_types": [
+      "standard",
+      "rotating",
+      "night"
+    ],
+    "special_licenses": [
+      "medical license"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Nurse",
+    "category": "Healthcare",
+    "description": "Provides medical care and supports patient health.",
+    "requirements": [
+      "nursing degree",
+      "patient care",
+      "emergency response"
+    ],
+    "degree_required": "Bachelor's in Nursing",
+    "min_experience_years": 2,
+    "physical_requirements": [
+      "long hours",
+      "standing for long periods"
+    ],
+    "shift_types": [
+      "standard",
+      "evening",
+      "rotating"
+    ],
+    "special_licenses": [
+      "nursing license"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Healthcare",
+    "category": "Medical Roles",
+    "description": "Assists medical staff with basic patient care and transport.",
+    "requirements": [
+      "compassion",
+      "mobility assistance"
+    ],
+    "degree_required": null,
+    "min_experience_years": 0,
+    "physical_requirements": [
+      "lifting",
+      "standing for long periods"
+    ],
+    "shift_types": [
+      "standard",
+      "evening",
+      "rotating"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 4,
+    "title": "General Office Worker",
+    "category": "HR",
+    "description": "Handles data entry, filing, and email communication.",
+    "requirements": [
+      "basic IT proficiency",
+      "communication skills"
+    ],
+    "degree_required": "High School Diploma",
+    "min_experience_years": 0,
+    "physical_requirements": [
+      "desk work"
+    ],
+    "shift_types": [
+      "standard"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 5,
+    "title": "Security Administration",
+    "category": "Consultant",
+    "description": "Processes sensitive offender information and access logs.",
+    "requirements": [
+      "confidentiality",
+      "IT systems",
+      "report monitoring"
+    ],
+    "degree_required": "Associate's Degree in Criminal Justice or related",
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "desk work"
+    ],
+    "shift_types": [
+      "standard"
+    ],
+    "special_licenses": [
+      "security clearance"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Prison Officer",
+    "category": "Law enforcement",
+    "description": "Supervises and manages inmates in a secure facility.",
+    "requirements": [
+      "physical fitness",
+      "security training",
+      "conflict management"
+    ],
+    "degree_required": null,
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "high stress",
+      "physical activity"
+    ],
+    "shift_types": [
+      "rotating",
+      "night",
+      "weekend"
+    ],
+    "special_licenses": [
+      "security clearance"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Canine Unit Officer",
+    "category": "Law enforcement",
+    "description": "Works with trained dogs to assist in security searches.",
+    "requirements": [
+      "dog handling experience",
+      "outdoor work readiness"
+    ],
+    "degree_required": null,
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "outdoor activity",
+      "handling animals"
+    ],
+    "shift_types": [
+      "rotating",
+      "weekend"
+    ],
+    "special_licenses": [
+      "dog handling license"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Law Enforcement & Security",
+    "category": "Advocate",
+    "description": "Involves managing high-risk individuals and transport.",
+    "requirements": [
+      "security training",
+      "law enforcement experience"
+    ],
+    "degree_required": null,
+    "min_experience_years": 2,
+    "physical_requirements": [
+      "high stress",
+      "physical readiness"
+    ],
+    "shift_types": [
+      "rotating",
+      "night",
+      "weekend"
+    ],
+    "special_licenses": [
+      "security license"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Education & Training Officer",
+    "category": "Teacher",
+    "description": "Teaches life skills and vocational training to inmates.",
+    "requirements": [
+      "teaching experience",
+      "vocational training"
+    ],
+    "degree_required": "Bachelor's in Education or relevant field",
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "classroom work"
+    ],
+    "shift_types": [
+      "standard"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 10,
+    "title": "Consultant",
+    "category": "Security & Offender Rehabilitation Work",
+    "description": "Provides counseling and support to offenders.",
+    "requirements": [
+      "counseling",
+      "social work",
+      "offender management"
+    ],
+    "degree_required": "Bachelor's in Psychology or Social Work",
+    "min_experience_years": 2,
+    "physical_requirements": [
+      "interpersonal engagement"
+    ],
+    "shift_types": [
+      "standard",
+      "rotating"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 11,
+    "title": "Chef / Cook",
+    "category": "Chef",
+    "description": "Prepares meals for staff and inmates.",
+    "requirements": [
+      "kitchen experience",
+      "food hygiene certificate"
+    ],
+    "degree_required": null,
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "standing",
+      "hot environments"
+    ],
+    "shift_types": [
+      "rotating"
+    ],
+    "special_licenses": [
+      "food hygiene certificate"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Kitchen Assistant",
+    "category": "Chef",
+    "description": "Assists in food preparation and cleaning.",
+    "requirements": [
+      "food handling",
+      "kitchen support"
+    ],
+    "degree_required": null,
+    "min_experience_years": 0,
+    "physical_requirements": [
+      "standing",
+      "kitchen work"
+    ],
+    "shift_types": [
+      "rotating",
+      "weekend"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 13,
+    "title": "Janitor",
+    "category": "Cleaning",
+    "description": "Maintains cleanliness of facilities.",
+    "requirements": [
+      "cleaning experience",
+      "chemical safety"
+    ],
+    "degree_required": null,
+    "min_experience_years": 0,
+    "physical_requirements": [
+      "standing",
+      "lifting",
+      "chemical use"
+    ],
+    "shift_types": [
+      "standard",
+      "night"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 14,
+    "title": "Waste Management Worker",
+    "category": "Construction",
+    "description": "Handles disposal of medical or hazardous waste.",
+    "requirements": [
+      "safety training",
+      "waste handling"
+    ],
+    "degree_required": null,
+    "min_experience_years": 0,
+    "physical_requirements": [
+      "lifting",
+      "handling waste"
+    ],
+    "shift_types": [
+      "rotating"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 15,
+    "title": "Facilities Technician",
+    "category": "Construction",
+    "description": "Performs general repairs and maintenance.",
+    "requirements": [
+      "plumbing",
+      "electrical",
+      "HVAC maintenance"
+    ],
+    "degree_required": null,
+    "min_experience_years": 2,
+    "physical_requirements": [
+      "manual labor",
+      "equipment handling"
+    ],
+    "shift_types": [
+      "standard",
+      "rotating"
+    ],
+    "special_licenses": []
+  },
+  {
+    "id": 16,
+    "title": "Driver",
+    "category": "Automobile",
+    "description": "Transports staff, patients, or inmates securely.",
+    "requirements": [
+      "valid driver\u2019s license",
+      "secure transport"
+    ],
+    "degree_required": null,
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "driving long hours"
+    ],
+    "shift_types": [
+      "rotating",
+      "weekend"
+    ],
+    "special_licenses": [
+      "commercial driver\u2019s license"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Warehouse Operative",
+    "category": "Automobile",
+    "description": "Manages inventory and operates storage facilities.",
+    "requirements": [
+      "inventory management",
+      "forklift operation"
+    ],
+    "degree_required": null,
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "lifting",
+      "warehouse work"
+    ],
+    "shift_types": [
+      "standard",
+      "rotating"
+    ],
+    "special_licenses": [
+      "forklift license"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Paramedic",
+    "category": "Healthcare",
+    "description": "Handles medical emergencies and urgent care.",
+    "requirements": [
+      "emergency medical training",
+      "CPR certification"
+    ],
+    "degree_required": "Paramedic certification",
+    "min_experience_years": 2,
+    "physical_requirements": [
+      "emergency response",
+      "physical agility"
+    ],
+    "shift_types": [
+      "rotating",
+      "night"
+    ],
+    "special_licenses": [
+      "paramedic license"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Fire Safety Officer",
+    "category": "Law enforcement",
+    "description": "Conducts fire prevention and emergency planning.",
+    "requirements": [
+      "fire safety training",
+      "emergency response"
+    ],
+    "degree_required": null,
+    "min_experience_years": 1,
+    "physical_requirements": [
+      "responding to alarms",
+      "evacuation drills"
+    ],
+    "shift_types": [
+      "rotating"
+    ],
+    "special_licenses": [
+      "fire safety certification"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Crisis Negotiator",
+    "category": "Consultant",
+    "description": "Manages high-risk conflicts and negotiates resolutions.",
+    "requirements": [
+      "conflict management",
+      "de-escalation training"
+    ],
+    "degree_required": null,
+    "min_experience_years": 2,
+    "physical_requirements": [
+      "high-stress interaction"
+    ],
+    "shift_types": [
+      "rotating",
+      "night"
+    ],
+    "special_licenses": []
+  }
+]
